@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32317.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FadedInjector", "FadedInjector.csproj", "{FD97B6B6-D2EC-40D7-9061-06C48E52BBBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD97B6B6-D2EC-40D7-9061-06C48E52BBBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD97B6B6-D2EC-40D7-9061-06C48E52BBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD97B6B6-D2EC-40D7-9061-06C48E52BBBE}.Debug|x64.ActiveCfg = Release|x64
+		{FD97B6B6-D2EC-40D7-9061-06C48E52BBBE}.Debug|x64.Build.0 = Release|x64
+		{FD97B6B6-D2EC-40D7-9061-06C48E52BBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD97B6B6-D2EC-40D7-9061-06C48E52BBBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD97B6B6-D2EC-40D7-9061-06C48E52BBBE}.Release|x64.ActiveCfg = Release|x64
+		{FD97B6B6-D2EC-40D7-9061-06C48E52BBBE}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BE14530-BDC7-433C-8859-E5DAF24B03FC}
+	EndGlobalSection
+EndGlobal
