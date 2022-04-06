@@ -49,6 +49,7 @@
             this.InjectPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.ClientsPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.DragTitle = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.Discord = new Guna.UI2.WinForms.Guna2CircleButton();
             this.Titlebar.SuspendLayout();
             this.SettingsPanel.SuspendLayout();
             this.InjectPanel.SuspendLayout();
@@ -118,6 +119,7 @@
             // 
             this.Titlebar.BorderColor = System.Drawing.Color.Black;
             this.Titlebar.BorderThickness = 1;
+            this.Titlebar.Controls.Add(this.Discord);
             this.Titlebar.Controls.Add(this.Help);
             this.Titlebar.Controls.Add(this.InjectorLabel);
             this.Titlebar.Controls.Add(this.Minimize);
@@ -175,7 +177,9 @@
             "Onix",
             "NG",
             "Fadeaway (1.16.201)",
-            "Fadeaway (1.17.11)"});
+            "Fadeaway (1.17.11)",
+            "Zephyr",
+            "Kek"});
             this.ClientList.Location = new System.Drawing.Point(16, 26);
             this.ClientList.Name = "ClientList";
             this.ClientList.Size = new System.Drawing.Size(220, 36);
@@ -310,6 +314,24 @@
             this.DragTitle.TargetControl = this.Titlebar;
             this.DragTitle.UseTransparentDrag = true;
             // 
+            // Discord
+            // 
+            this.Discord.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Discord.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Discord.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Discord.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Discord.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Discord.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.Discord.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.Discord.ForeColor = System.Drawing.Color.White;
+            this.Discord.Image = ((System.Drawing.Image)(resources.GetObject("Discord.Image")));
+            this.Discord.Location = new System.Drawing.Point(697, 3);
+            this.Discord.Name = "Discord";
+            this.Discord.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Discord.Size = new System.Drawing.Size(28, 28);
+            this.Discord.TabIndex = 11;
+            this.Discord.Click += new System.EventHandler(this.Discord_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,6 +377,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton Help;
         public Guna.UI2.WinForms.Guna2ComboBox ClientList;
         private Guna.UI2.WinForms.Guna2DragControl DragTitle;
+        private Guna.UI2.WinForms.Guna2CircleButton Discord;
     }
 }
 

@@ -133,6 +133,14 @@ namespace FadedInjector.Utility
             {
                 InjectDLL($"{MainForm.AssetDirectory}Fadeaway1.17.11.1.dll");
             }
+            else if (mf.ClientList.SelectedIndex == 6)
+            {
+                InjectDLL($"{MainForm.AssetDirectory}Zephyr.dll");
+            }
+            else if (mf.ClientList.SelectedIndex == 7)
+            {
+                InjectDLL($"{MainForm.AssetDirectory}Kek.dll");
+            }
         }
     }
 }

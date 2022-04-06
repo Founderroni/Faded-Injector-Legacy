@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using DiscordRPC;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace FadedInjector
@@ -22,6 +23,11 @@ namespace FadedInjector
         private void Help_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Injector - Founder\nInjection Functionality - EchoHackCMD", "Credits");
+        }
+
+        private void Discord_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://discord.gg/KGGX69sXqf");
         }
 
         private void SelectDLL_Click(object sender, EventArgs e)
@@ -49,17 +55,18 @@ namespace FadedInjector
             Util.CheckForDirectory();
             if (!AutoInject.Checked)
             {
-                if (FileToInjectDir == "" || FileToInjectDir == null) MessageBox.Show("Select a DLL", "Error");
+                if (FileToInjectDir == "" || FileToInjectDir == null) { MessageBox.Show("Select a DLL", "Error"); return; }
                 Util.InjectDLL(FileToInjectDir);
             } else
             {
-                if (ClientList.SelectedIndex == -1) MessageBox.Show("Select a Client", "Error");
+                if (ClientList.SelectedIndex == -1) { MessageBox.Show("Select a Client", "Error"); return; }
                 Util.InjectClient();
             }
         }
 
         private void ClientList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //It works so I'm not gonna bother changing it, if someone can make it better create a pull request
             if (ClientList.SelectedIndex == 0)
             {
                 Util.DownloadFile("https://horion.download/bin/Horion.dll", $"{AssetDirectory}Horion.dll");
@@ -83,6 +90,14 @@ namespace FadedInjector
             else if (ClientList.SelectedIndex == 5)
             {
                 Util.DownloadFile("https://github.com/FadedKow/Assets/raw/main/MCBE%20Clients/Fadeaway_1.17.11.1.dll", $"{AssetDirectory}Fadeaway1.17.11.1.dll");
+            }
+            else if (ClientList.SelectedIndex == 6)
+            {
+                Util.DownloadFile("https://github.com/FadedKow/Assets/raw/main/MCBE%20Clients/Zephyr.dll", $"{AssetDirectory}Zephyr.dll");
+            }
+            else if (ClientList.SelectedIndex == 7)
+            {
+                Util.DownloadFile("https://github.com/FadedKow/Assets/raw/main/MCBE%20Clients/KekClub.dll", $"{AssetDirectory}Kek.dll");
             }
         }
 
