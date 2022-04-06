@@ -141,6 +141,10 @@ namespace FadedInjector.Utility
             {
                 InjectDLL($"{MainForm.AssetDirectory}Kek.dll");
             }
+            else if (mf.ClientList.SelectedIndex == 7)
+            {
+                InjectDLL($"{MainForm.AssetDirectory}Bom.dll");
+            }
         }
     }
 }

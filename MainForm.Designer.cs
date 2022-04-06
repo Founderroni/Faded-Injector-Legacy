@@ -37,6 +37,7 @@
             this.Minimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Inject = new Guna.UI2.WinForms.Guna2Button();
             this.Titlebar = new Guna.UI2.WinForms.Guna2Panel();
+            this.Discord = new Guna.UI2.WinForms.Guna2CircleButton();
             this.Help = new Guna.UI2.WinForms.Guna2CircleButton();
             this.InjectorLabel = new System.Windows.Forms.Label();
             this.ClientList = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -49,7 +50,7 @@
             this.InjectPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.ClientsPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.DragTitle = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.Discord = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.Animation = new Guna.UI2.WinForms.Guna2CircleButton();
             this.Titlebar.SuspendLayout();
             this.SettingsPanel.SuspendLayout();
             this.InjectPanel.SuspendLayout();
@@ -130,6 +131,24 @@
             this.Titlebar.Size = new System.Drawing.Size(830, 37);
             this.Titlebar.TabIndex = 3;
             // 
+            // Discord
+            // 
+            this.Discord.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Discord.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Discord.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Discord.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Discord.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Discord.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.Discord.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.Discord.ForeColor = System.Drawing.Color.White;
+            this.Discord.Image = global::FadedInjector.Properties.Resources.discord;
+            this.Discord.Location = new System.Drawing.Point(697, 3);
+            this.Discord.Name = "Discord";
+            this.Discord.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Discord.Size = new System.Drawing.Size(28, 28);
+            this.Discord.TabIndex = 11;
+            this.Discord.Click += new System.EventHandler(this.Discord_Click);
+            // 
             // Help
             // 
             this.Help.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -179,7 +198,8 @@
             "Fadeaway (1.16.201)",
             "Fadeaway (1.17.11)",
             "Zephyr",
-            "Kek"});
+            "Kek",
+            "Bom"});
             this.ClientList.Location = new System.Drawing.Point(16, 26);
             this.ClientList.Name = "ClientList";
             this.ClientList.Size = new System.Drawing.Size(220, 36);
@@ -314,23 +334,26 @@
             this.DragTitle.TargetControl = this.Titlebar;
             this.DragTitle.UseTransparentDrag = true;
             // 
-            // Discord
+            // Animation
             // 
-            this.Discord.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Discord.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Discord.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Discord.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Discord.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Discord.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.Discord.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.Discord.ForeColor = System.Drawing.Color.White;
-            this.Discord.Image = ((System.Drawing.Image)(resources.GetObject("Discord.Image")));
-            this.Discord.Location = new System.Drawing.Point(697, 3);
-            this.Discord.Name = "Discord";
-            this.Discord.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Discord.Size = new System.Drawing.Size(28, 28);
-            this.Discord.TabIndex = 11;
-            this.Discord.Click += new System.EventHandler(this.Discord_Click);
+            this.Animation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Animation.Animated = true;
+            this.Animation.AnimatedGIF = true;
+            this.Animation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Animation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Animation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Animation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Animation.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.Animation.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Animation.ForeColor = System.Drawing.Color.White;
+            this.Animation.Image = ((System.Drawing.Image)(resources.GetObject("Animation.Image")));
+            this.Animation.ImageSize = new System.Drawing.Size(150, 150);
+            this.Animation.Location = new System.Drawing.Point(329, 166);
+            this.Animation.Name = "Animation";
+            this.Animation.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Animation.Size = new System.Drawing.Size(148, 148);
+            this.Animation.TabIndex = 10;
             // 
             // MainForm
             // 
@@ -338,6 +361,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(830, 465);
+            this.Controls.Add(this.Animation);
             this.Controls.Add(this.ClientsPanel);
             this.Controls.Add(this.InjectPanel);
             this.Controls.Add(this.SettingsPanel);
@@ -378,6 +402,7 @@
         public Guna.UI2.WinForms.Guna2ComboBox ClientList;
         private Guna.UI2.WinForms.Guna2DragControl DragTitle;
         private Guna.UI2.WinForms.Guna2CircleButton Discord;
+        private Guna.UI2.WinForms.Guna2CircleButton Animation;
     }
 }
 
