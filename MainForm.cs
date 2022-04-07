@@ -13,7 +13,7 @@ namespace FadedInjector
         public DiscordRpcClient client;
         public readonly string InjectorDirectory = AppDomain.CurrentDomain.BaseDirectory;
         public static readonly string AssetDirectory = $@"{Directory.GetCurrentDirectory()}\Assets\";
-        public readonly string AssetGitClient = "https://github.com/FadedKow/Assets/blob/main/MCBE%20Clients/";
+        public readonly string AssetGitClient = "https://github.com/FadedKow/Assets/raw/main/MCBE%20Clients/";
         Utils Util = new Utils();
 
         public MainForm()
