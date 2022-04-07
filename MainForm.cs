@@ -67,42 +67,36 @@ namespace FadedInjector
 
         private void ClientList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //It works so I'm not gonna bother changing it, if someone can make it better create a pull request
-            if (ClientList.SelectedIndex == 0)
+            switch (ClientList.SelectedIndex)
             {
-                Util.DownloadFile($"https://horion.download/bin/Horion.dll", $"{AssetDirectory}Horion.dll");
-            }
-            else if (ClientList.SelectedIndex == 1)
-            {
-                Util.DownloadFile($"https://github.com/PacketDeveloper/PacketClient/raw/main/PacketClientFree.dll", $"{AssetDirectory}Packet.dll");
-            }
-            else if (ClientList.SelectedIndex == 2)
-            {
-                Util.DownloadFile($"https://github.com/bernarddesfosse/onixclientautoupdate/raw/main/OnixClient.dll", $"{AssetDirectory}Onix.dll");
-            }
-            else if (ClientList.SelectedIndex == 3)
-            {
-                Util.DownloadFile($"{AssetGitClient}NG.dll", $"{AssetDirectory}NG.dll");
-            }
-            else if (ClientList.SelectedIndex == 4)
-            {
-                Util.DownloadFile($"{AssetGitClient}Fadeaway_1.16.201.dll", $"{AssetDirectory}Fadeaway1.16.201.dll");
-            }
-            else if (ClientList.SelectedIndex == 5)
-            {
-                Util.DownloadFile($"{AssetGitClient}Fadeaway_1.17.11.1.dll", $"{AssetDirectory}Fadeaway1.17.11.1.dll");
-            }
-            else if (ClientList.SelectedIndex == 6)
-            {
-                Util.DownloadFile($"{AssetGitClient}Zephyr.dll", $"{AssetDirectory}Zephyr.dll");
-            }
-            else if (ClientList.SelectedIndex == 7)
-            {
-                Util.DownloadFile($"{AssetGitClient}KekClub.dll", $"{AssetDirectory}Kek.dll");
-            }
-            else if (ClientList.SelectedIndex == 8)
-            {
-                Util.DownloadFile($"{AssetGitClient}Bom.dll", $"{AssetDirectory}Bom.dll");
+                case 0:
+                    Util.DownloadFile($"https://horion.download/bin/Horion.dll", $"{AssetDirectory}Horion.dll");
+                    break;
+                case 1:
+                    Util.DownloadFile($"https://github.com/PacketDeveloper/PacketClient/raw/main/PacketClientFree.dll", $"{AssetDirectory}Packet.dll");
+                    break;
+                case 2:
+                    Util.DownloadFile($"https://github.com/bernarddesfosse/onixclientautoupdate/raw/main/OnixClient.dll", $"{AssetDirectory}Onix.dll");
+                    break;
+                case 3:
+                    Util.DownloadFile($"{AssetGitClient}NG.dll", $"{AssetDirectory}NG.dll");
+                    break;
+                case 4:
+                    Util.DownloadFile($"{AssetGitClient}Fadeaway_1.16.201.dll", $"{AssetDirectory}Fadeaway1.16.201.dll");
+                    break;
+                case 5:
+                    Util.DownloadFile($"{AssetGitClient}Fadeaway_1.17.11.1.dll", $"{AssetDirectory}Fadeaway1.17.11.1.dll");
+                    break;
+                case 6:
+                    Util.DownloadFile($"{AssetGitClient}Zephyr.dll", $"{AssetDirectory}Zephyr.dll");
+                    break;
+                case 7:
+                    Util.DownloadFile($"{AssetGitClient}KekClub.dll", $"{AssetDirectory}Kek.dll");
+                    break;
+                case 8:
+                    Util.DownloadFile($"{AssetGitClient}Bom.dll", $"{AssetDirectory}Bom.dll");
+                    break;
+
             }
         }
 
