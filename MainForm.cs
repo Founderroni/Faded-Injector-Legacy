@@ -131,5 +131,19 @@ namespace FadedInjector
                 client.Dispose();
             }
         }
+
+        private void DisableGif_Click(object sender, EventArgs e)
+        {
+            if (DisableGif.Checked)
+            {
+                Animation.AnimatedGIF = false;
+                Animation.Animated = false;
+            }
+            else
+            {
+                Animation.AnimatedGIF = true;
+                Animation.Animated = true;
+            }
+        }
     }
 }
