@@ -109,41 +109,35 @@ namespace FadedInjector.Utility
         public void InjectClient()
         {
             MainForm mf = (MainForm)Application.OpenForms["MainForm"];
-            if (mf.ClientList.SelectedIndex == 0)
+            switch (mf.ClientList.SelectedIndex)
             {
-                InjectDLL($"{MainForm.AssetDirectory}Horion.dll");
-            }
-            else if (mf.ClientList.SelectedIndex == 1)
-            {
-                InjectDLL($"{MainForm.AssetDirectory}Packet.dll");
-            }
-            else if (mf.ClientList.SelectedIndex == 2)
-            {
-                InjectDLL($"{MainForm.AssetDirectory}Onix.dll");
-            }
-            else if (mf.ClientList.SelectedIndex == 3)
-            {
-                InjectDLL($"{MainForm.AssetDirectory}NG.dll");
-            }
-            else if (mf.ClientList.SelectedIndex == 4)
-            {
-                InjectDLL($"{MainForm.AssetDirectory}Fadeaway1.16.201.dll");
-            }
-            else if (mf.ClientList.SelectedIndex == 5)
-            {
-                InjectDLL($"{MainForm.AssetDirectory}Fadeaway1.17.11.1.dll");
-            }
-            else if (mf.ClientList.SelectedIndex == 6)
-            {
-                InjectDLL($"{MainForm.AssetDirectory}Zephyr.dll");
-            }
-            else if (mf.ClientList.SelectedIndex == 7)
-            {
-                InjectDLL($"{MainForm.AssetDirectory}Kek.dll");
-            }
-            else if (mf.ClientList.SelectedIndex == 7)
-            {
-                InjectDLL($"{MainForm.AssetDirectory}Bom.dll");
+                case 0:
+                    InjectDLL($"{MainForm.AssetDirectory}Horion.dll");
+                    break;
+                case 1:
+                    InjectDLL($"{MainForm.AssetDirectory}Packet.dll");
+                    break;
+                case 2:
+                    InjectDLL($"{MainForm.AssetDirectory}Onix.dll");
+                    break;
+                case 3:
+                    InjectDLL($"{MainForm.AssetDirectory}NG.dll");
+                    break;
+                case 4:
+                    InjectDLL($"{MainForm.AssetDirectory}Fadeaway1.16.201.dll");
+                    break;
+                case 5:
+                    InjectDLL($"{MainForm.AssetDirectory}Fadeaway1.17.11.1.dll");
+                    break;
+                case 6:
+                    InjectDLL($"{MainForm.AssetDirectory}Zephyr.dll");
+                    break;
+                case 7:
+                    InjectDLL($"{MainForm.AssetDirectory}Kek.dll");
+                    break;
+                case 8:
+                    InjectDLL($"{MainForm.AssetDirectory}Bom.dll");
+                    break;
             }
         }
     }
