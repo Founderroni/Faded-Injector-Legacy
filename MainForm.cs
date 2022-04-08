@@ -113,18 +113,18 @@ namespace FadedInjector
             if (DiscordRpc.Checked)
             {
                 client = new DiscordRpcClient("961004803843031040");
-                client.Initialize();
                 client.SetPresence(new RichPresence()
                 {
                     Details = "Injecting Gamer Fluid",
                     State = "Committing Large Amounts Of Trolling",
                     Assets = new Assets()
                     {
-                        LargeImageKey = "shorturl.at/oMZ25", //Don't go above 32 characters
+                        LargeImageKey = "https://i.imgur.com/ufZN3k3.png", //Don't go above 32 characters
                         LargeImageText = "FadedInjector - Founder#8300",
-                        SmallImageKey = "shorturl.at/lxzA0"
+                        SmallImageKey = "https://i.imgur.com/vOkR3H5.png"
                     }
                 });
+                client.Initialize();
             }
             else
             {
