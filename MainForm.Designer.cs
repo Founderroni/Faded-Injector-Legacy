@@ -44,6 +44,8 @@
             this.SelectDLL = new Guna.UI2.WinForms.Guna2Button();
             this.AutoInject = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.SettingsPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.FreezeGifLabel = new System.Windows.Forms.Label();
+            this.FreezeGif = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.RpcLabel = new System.Windows.Forms.Label();
             this.DiscordRpc = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.AutoInjectLabel = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@
             this.ClientsPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.DragTitle = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Animation = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.DisableGifLabel = new System.Windows.Forms.Label();
-            this.DisableGif = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.Titlebar.SuspendLayout();
             this.SettingsPanel.SuspendLayout();
             this.InjectPanel.SuspendLayout();
@@ -252,8 +252,8 @@
             // SettingsPanel
             // 
             this.SettingsPanel.BackColor = System.Drawing.Color.Transparent;
-            this.SettingsPanel.Controls.Add(this.DisableGifLabel);
-            this.SettingsPanel.Controls.Add(this.DisableGif);
+            this.SettingsPanel.Controls.Add(this.FreezeGifLabel);
+            this.SettingsPanel.Controls.Add(this.FreezeGif);
             this.SettingsPanel.Controls.Add(this.RpcLabel);
             this.SettingsPanel.Controls.Add(this.DiscordRpc);
             this.SettingsPanel.Controls.Add(this.AutoInjectLabel);
@@ -265,6 +265,36 @@
             this.SettingsPanel.ShadowColor = System.Drawing.Color.Black;
             this.SettingsPanel.Size = new System.Drawing.Size(306, 106);
             this.SettingsPanel.TabIndex = 7;
+            // 
+            // FreezeGifLabel
+            // 
+            this.FreezeGifLabel.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FreezeGifLabel.ForeColor = System.Drawing.Color.White;
+            this.FreezeGifLabel.Location = new System.Drawing.Point(38, 68);
+            this.FreezeGifLabel.Name = "FreezeGifLabel";
+            this.FreezeGifLabel.Size = new System.Drawing.Size(130, 20);
+            this.FreezeGifLabel.TabIndex = 11;
+            this.FreezeGifLabel.Text = "Freeze Gif";
+            this.FreezeGifLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // FreezeGif
+            // 
+            this.FreezeGif.BackColor = System.Drawing.Color.Transparent;
+            this.FreezeGif.CheckedState.BorderColor = System.Drawing.Color.Fuchsia;
+            this.FreezeGif.CheckedState.BorderRadius = 2;
+            this.FreezeGif.CheckedState.BorderThickness = 0;
+            this.FreezeGif.CheckedState.FillColor = System.Drawing.Color.Fuchsia;
+            this.FreezeGif.ForeColor = System.Drawing.Color.White;
+            this.FreezeGif.Location = new System.Drawing.Point(12, 68);
+            this.FreezeGif.Name = "FreezeGif";
+            this.FreezeGif.Size = new System.Drawing.Size(20, 20);
+            this.FreezeGif.TabIndex = 10;
+            this.FreezeGif.Text = "Auto Inject";
+            this.FreezeGif.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.FreezeGif.UncheckedState.BorderRadius = 2;
+            this.FreezeGif.UncheckedState.BorderThickness = 0;
+            this.FreezeGif.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.FreezeGif.Click += new System.EventHandler(this.FreezeGif_Click);
             // 
             // RpcLabel
             // 
@@ -358,36 +388,7 @@
             this.Animation.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.Animation.Size = new System.Drawing.Size(148, 148);
             this.Animation.TabIndex = 10;
-            // 
-            // DisableGifLabel
-            // 
-            this.DisableGifLabel.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisableGifLabel.ForeColor = System.Drawing.Color.White;
-            this.DisableGifLabel.Location = new System.Drawing.Point(38, 68);
-            this.DisableGifLabel.Name = "DisableGifLabel";
-            this.DisableGifLabel.Size = new System.Drawing.Size(130, 20);
-            this.DisableGifLabel.TabIndex = 11;
-            this.DisableGifLabel.Text = "Disable Gif";
-            this.DisableGifLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // DisableGif
-            // 
-            this.DisableGif.BackColor = System.Drawing.Color.Transparent;
-            this.DisableGif.CheckedState.BorderColor = System.Drawing.Color.Fuchsia;
-            this.DisableGif.CheckedState.BorderRadius = 2;
-            this.DisableGif.CheckedState.BorderThickness = 0;
-            this.DisableGif.CheckedState.FillColor = System.Drawing.Color.Fuchsia;
-            this.DisableGif.ForeColor = System.Drawing.Color.White;
-            this.DisableGif.Location = new System.Drawing.Point(12, 68);
-            this.DisableGif.Name = "DisableGif";
-            this.DisableGif.Size = new System.Drawing.Size(20, 20);
-            this.DisableGif.TabIndex = 10;
-            this.DisableGif.Text = "Auto Inject";
-            this.DisableGif.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.DisableGif.UncheckedState.BorderRadius = 2;
-            this.DisableGif.UncheckedState.BorderThickness = 0;
-            this.DisableGif.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.DisableGif.Click += new System.EventHandler(this.DisableGif_Click);
+            this.Animation.Click += new System.EventHandler(this.Animation_Click);
             // 
             // MainForm
             // 
@@ -437,8 +438,8 @@
         private Guna.UI2.WinForms.Guna2DragControl DragTitle;
         private Guna.UI2.WinForms.Guna2CircleButton Discord;
         private Guna.UI2.WinForms.Guna2CircleButton Animation;
-        private System.Windows.Forms.Label DisableGifLabel;
-        private Guna.UI2.WinForms.Guna2CustomCheckBox DisableGif;
+        private System.Windows.Forms.Label FreezeGifLabel;
+        private Guna.UI2.WinForms.Guna2CustomCheckBox FreezeGif;
     }
 }
 

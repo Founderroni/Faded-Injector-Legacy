@@ -132,9 +132,9 @@ namespace FadedInjector
             }
         }
 
-        private void DisableGif_Click(object sender, EventArgs e)
+        private void FreezeGif_Click(object sender, EventArgs e)
         {
-            if (DisableGif.Checked)
+            if (FreezeGif.Checked)
             {
                 Animation.AnimatedGIF = false;
                 Animation.Animated = false;
@@ -143,6 +143,26 @@ namespace FadedInjector
             {
                 Animation.AnimatedGIF = true;
                 Animation.Animated = true;
+            }
+        }
+
+        private void Animation_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog Open = new OpenFileDialog();
+                Open.Filter = "Image Files(*.jpg; *.png; *.jpeg; *.gif; *.bmp)|*.jpg; *.png; *.jpeg; *.gif; *.bmp)";
+                if (Open.ShowDialog() == DialogResult.OK)
+                {
+                    string ImageFile = Open.FileName;
+                    System.Drawing.Image Img = System.Drawing.Image.FromFile(ImageFile);
+                    Animation.Image = Img;
+                    Refresh();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Uh oh, a fucky wucky has occured:\n"+ex.Message, "Error");
             }
         }
     }
