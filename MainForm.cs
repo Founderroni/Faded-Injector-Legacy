@@ -14,6 +14,7 @@ namespace FadedInjector
         public readonly string InjectorDirectory = AppDomain.CurrentDomain.BaseDirectory;
         public static readonly string AssetDirectory = $@"{Directory.GetCurrentDirectory()}\Assets\";
         public readonly string AssetGitClient = "https://github.com/FadedKow/Assets/raw/main/MCBE%20Clients/";
+        public string McVersion;
         Utils Util = new Utils();
 
         public MainForm()
@@ -96,7 +97,6 @@ namespace FadedInjector
                 case 8:
                     Util.DownloadFile($"{AssetGitClient}Bom.dll", $"{AssetDirectory}Bom.dll");
                     break;
-
             }
         }
 
@@ -163,6 +163,62 @@ namespace FadedInjector
             catch (Exception ex)
             {
                 MessageBox.Show("Uh oh, a fucky wucky has occured:\n"+ex.Message, "Error");
+            }
+        }
+
+        private void Spoof_Click(object sender, EventArgs e)
+        {
+            if (VersionList.SelectedIndex == -1) { MessageBox.Show("Version not selected", "Error"); return; }
+            Process.Start($"{AssetDirectory}Spoofer.exe",$"Spoof -v {McVersion}");
+        }
+
+        private void VersionList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Util.DownloadFile("https://github.com/fadeaway-client/FadedToolCLI/releases/latest/download/fadedtoolcli.exe", $"{AssetDirectory}Spoofer.exe");
+            switch (VersionList.SelectedIndex)
+            {
+                case 0:
+                    McVersion = "1.16.40";
+                    break;
+                case 1:
+                    McVersion = "1.16.100";
+                    break;
+                case 2:
+                    McVersion = "1.16.201";
+                    break;
+                case 3:
+                    McVersion = "1.16.210";
+                    break;
+                case 4:
+                    McVersion = "1.16.221";
+                    break;
+                case 5:
+                    McVersion = "1.17.0";
+                    break;
+                case 6:
+                    McVersion = "1.17.10";
+                    break;
+                case 7:
+                    McVersion = "1.17.11";
+                    break;
+                case 8:
+                    McVersion = "1.17.40";
+                    break;
+                case 9:
+                    McVersion = "1.17.41";
+                    break;
+                case 10:
+                    McVersion = "1.18.0";
+                    break;
+                case 11:
+                    McVersion = "1.18.2";
+                    break;
+                case 12:
+                    McVersion = "1.18.10.4";
+                    break;
+                case 13:
+                    McVersion = "1.18.12.1";
+                    break;
             }
         }
     }
