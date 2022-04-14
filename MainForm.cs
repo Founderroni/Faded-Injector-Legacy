@@ -5,6 +5,7 @@ using DiscordRPC;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Threading;
+using System.Drawing;
 
 namespace FadedInjector
 {
@@ -245,6 +246,12 @@ namespace FadedInjector
                     McVersion = "1.18.12.1";
                     break;
             }
+        }
+
+        private void DarknessSlider_Scroll(object sender, ScrollEventArgs e)
+        {
+            MainForm mf = (MainForm)Application.OpenForms["MainForm"];
+            mf.BackColor = Color.FromArgb(DarknessSlider.Value, DarknessSlider.Value, DarknessSlider.Value);
         }
     }
 }

@@ -56,6 +56,8 @@
             this.SpooferPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.Spoof = new Guna.UI2.WinForms.Guna2Button();
             this.VersionList = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.DarknessSlider = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.DarknessLabel = new System.Windows.Forms.Label();
             this.Titlebar.SuspendLayout();
             this.SettingsPanel.SuspendLayout();
             this.InjectPanel.SuspendLayout();
@@ -258,6 +260,8 @@
             // SettingsPanel
             // 
             this.SettingsPanel.BackColor = System.Drawing.Color.Transparent;
+            this.SettingsPanel.Controls.Add(this.DarknessLabel);
+            this.SettingsPanel.Controls.Add(this.DarknessSlider);
             this.SettingsPanel.Controls.Add(this.FreezeGifLabel);
             this.SettingsPanel.Controls.Add(this.FreezeGif);
             this.SettingsPanel.Controls.Add(this.RpcLabel);
@@ -269,7 +273,7 @@
             this.SettingsPanel.Location = new System.Drawing.Point(512, 43);
             this.SettingsPanel.Name = "SettingsPanel";
             this.SettingsPanel.ShadowColor = System.Drawing.Color.Black;
-            this.SettingsPanel.Size = new System.Drawing.Size(306, 106);
+            this.SettingsPanel.Size = new System.Drawing.Size(306, 129);
             this.SettingsPanel.TabIndex = 7;
             // 
             // FreezeGifLabel
@@ -465,6 +469,29 @@
             this.VersionList.TabIndex = 4;
             this.VersionList.SelectedIndexChanged += new System.EventHandler(this.VersionList_SelectedIndexChanged);
             // 
+            // DarknessSlider
+            // 
+            this.DarknessSlider.LargeChange = 1;
+            this.DarknessSlider.Location = new System.Drawing.Point(12, 94);
+            this.DarknessSlider.Maximum = 20;
+            this.DarknessSlider.Name = "DarknessSlider";
+            this.DarknessSlider.Size = new System.Drawing.Size(201, 23);
+            this.DarknessSlider.TabIndex = 12;
+            this.DarknessSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.DarknessSlider.Value = 15;
+            this.DarknessSlider.Scroll += new System.Windows.Forms.ScrollEventHandler(this.DarknessSlider_Scroll);
+            // 
+            // DarknessLabel
+            // 
+            this.DarknessLabel.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarknessLabel.ForeColor = System.Drawing.Color.White;
+            this.DarknessLabel.Location = new System.Drawing.Point(219, 94);
+            this.DarknessLabel.Name = "DarknessLabel";
+            this.DarknessLabel.Size = new System.Drawing.Size(84, 20);
+            this.DarknessLabel.TabIndex = 13;
+            this.DarknessLabel.Text = "Darkness";
+            this.DarknessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,6 +547,8 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel SpooferPanel;
         public Guna.UI2.WinForms.Guna2ComboBox VersionList;
         private Guna.UI2.WinForms.Guna2Button Spoof;
+        private System.Windows.Forms.Label DarknessLabel;
+        private Guna.UI2.WinForms.Guna2TrackBar DarknessSlider;
     }
 }
 
