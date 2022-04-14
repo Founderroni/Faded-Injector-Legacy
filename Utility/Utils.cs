@@ -138,6 +138,12 @@ namespace FadedInjector.Utility
                 case 8:
                     InjectDLL($"{MainForm.AssetDirectory}Bom.dll");
                     break;
+                case 9:
+                    InjectDLL($"{MainForm.AssetDirectory}Badman.dll");
+                    break;
+                case 10:
+                    InjectDLL($"{MainForm.AssetDirectory}StrikeInjector.exe");
+                    break;
             }
         }
     }

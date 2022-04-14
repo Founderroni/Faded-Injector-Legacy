@@ -54,8 +54,8 @@
             this.DragTitle = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Animation = new Guna.UI2.WinForms.Guna2CircleButton();
             this.SpooferPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.VersionList = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Spoof = new Guna.UI2.WinForms.Guna2Button();
+            this.VersionList = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Titlebar.SuspendLayout();
             this.SettingsPanel.SuspendLayout();
             this.InjectPanel.SuspendLayout();
@@ -205,7 +205,9 @@
             "Fadeaway (1.17.11)",
             "Zephyr",
             "Kek",
-            "Bom"});
+            "Bom",
+            "Badman",
+            "Strike"});
             this.ClientList.Location = new System.Drawing.Point(16, 26);
             this.ClientList.Name = "ClientList";
             this.ClientList.Size = new System.Drawing.Size(220, 36);
@@ -407,6 +409,26 @@
             this.SpooferPanel.Size = new System.Drawing.Size(262, 88);
             this.SpooferPanel.TabIndex = 10;
             // 
+            // Spoof
+            // 
+            this.Spoof.Animated = true;
+            this.Spoof.AutoRoundedCorners = true;
+            this.Spoof.BorderColor = System.Drawing.Color.Fuchsia;
+            this.Spoof.BorderRadius = 17;
+            this.Spoof.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Spoof.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Spoof.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Spoof.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Spoof.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Spoof.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Spoof.ForeColor = System.Drawing.Color.White;
+            this.Spoof.Location = new System.Drawing.Point(182, 26);
+            this.Spoof.Name = "Spoof";
+            this.Spoof.Size = new System.Drawing.Size(64, 37);
+            this.Spoof.TabIndex = 6;
+            this.Spoof.Text = "Spoof";
+            this.Spoof.Click += new System.EventHandler(this.Spoof_Click);
+            // 
             // VersionList
             // 
             this.VersionList.BackColor = System.Drawing.Color.Transparent;
@@ -442,26 +464,6 @@
             this.VersionList.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.VersionList.TabIndex = 4;
             this.VersionList.SelectedIndexChanged += new System.EventHandler(this.VersionList_SelectedIndexChanged);
-            // 
-            // Spoof
-            // 
-            this.Spoof.Animated = true;
-            this.Spoof.AutoRoundedCorners = true;
-            this.Spoof.BorderColor = System.Drawing.Color.Fuchsia;
-            this.Spoof.BorderRadius = 17;
-            this.Spoof.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Spoof.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Spoof.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Spoof.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Spoof.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.Spoof.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Spoof.ForeColor = System.Drawing.Color.White;
-            this.Spoof.Location = new System.Drawing.Point(182, 26);
-            this.Spoof.Name = "Spoof";
-            this.Spoof.Size = new System.Drawing.Size(64, 37);
-            this.Spoof.TabIndex = 6;
-            this.Spoof.Text = "Spoof";
-            this.Spoof.Click += new System.EventHandler(this.Spoof_Click);
             // 
             // MainForm
             // 

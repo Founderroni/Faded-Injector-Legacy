@@ -99,6 +99,12 @@ namespace FadedInjector
                 case 8:
                     Util.DownloadFile($"{AssetGitClient}Bom.dll", $"{AssetDirectory}Bom.dll");
                     break;
+                case 9:
+                    Util.DownloadFile($"https://github.com/BadMan-Client/BadMan-Releases/releases/latest/download/BadManPublic.dll", $"{AssetDirectory}Badman.dll");
+                    break;
+                case 10:
+                    Util.DownloadFile($"https://cdn.discordapp.com/attachments/937726504614395954/951649397807140884/Strike.exe", $"{AssetDirectory}StrikeInjector.exe");
+                    break;
             }
         }
 
