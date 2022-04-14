@@ -4,6 +4,7 @@ using System.IO;
 using DiscordRPC;
 using System.Diagnostics;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace FadedInjector
 {
@@ -15,6 +16,7 @@ namespace FadedInjector
         public static readonly string AssetDirectory = $@"{Directory.GetCurrentDirectory()}\Assets\";
         public readonly string AssetGitClient = "https://github.com/FadedKow/Assets/raw/main/MCBE%20Clients/";
         public string McVersion;
+        public int ErrorsCatched = 0;
         Utils Util = new Utils();
 
         public MainForm()
@@ -169,7 +171,24 @@ namespace FadedInjector
         private void Spoof_Click(object sender, EventArgs e)
         {
             if (VersionList.SelectedIndex == -1) { MessageBox.Show("Version not selected", "Error"); return; }
-            Process.Start($"{AssetDirectory}Spoofer.exe",$"Spoof -v {McVersion}");
+            SpoofStart:
+            try
+            {
+                Process.Start($"{AssetDirectory}Spoofer.exe", $"Spoof -v {McVersion}");
+                ErrorsCatched = 0;
+            } catch (Exception ex)
+            {
+                if (ErrorsCatched < 2)
+                {
+                    ErrorsCatched++;
+                    Thread.Sleep(100);
+                    goto SpoofStart;
+                } else
+                {
+                    MessageBox.Show("Spoofer has encountered an error, is another program using it?\n" + ex.Message, "Spoof Error");
+                    ErrorsCatched = 0;
+                }
+            }
         }
 
         private void VersionList_SelectedIndexChanged(object sender, EventArgs e)
