@@ -106,6 +106,19 @@ namespace FadedInjector.Utility
                 Directory.CreateDirectory(MainForm.AssetDirectory);
         }
 
+        public static void LaunchGame()
+        {// Credits Onix
+            var process = new Process();
+            var startInfo = new ProcessStartInfo
+            {
+                WindowStyle = ProcessWindowStyle.Normal,
+                FileName = "explorer.exe",
+                Arguments = "shell:appsFolder\\Microsoft.MinecraftUWP_8wekyb3d8bbwe!App",
+            };
+            process.StartInfo = startInfo;
+            process.Start();
+        }
+
         public void InjectClient()
         {
             MainForm mf = (MainForm)Application.OpenForms["MainForm"];

@@ -39,7 +39,7 @@ namespace FadedInjector
         {
             Util.CheckForDirectory();
             OpenFileDialog FileIn = new OpenFileDialog();
-             FileIn.Filter = "dll |*.dll";
+            FileIn.Filter = "dll |*.dll";
             if (FileIn.ShowDialog() == DialogResult.OK)
             {
                 if (FileIn.SafeFileName.ToLower().EndsWith(".dll"))
@@ -62,10 +62,12 @@ namespace FadedInjector
             if (!AutoInject.Checked)
             {
                 if (FileToInjectDir == "" || FileToInjectDir == null) { MessageBox.Show("Select a DLL", "Error"); return; }
+                if (AutoFocus.Checked) Utils.LaunchGame();
                 Util.InjectDLL(FileToInjectDir);
             } else
             {
                 if (ClientList.SelectedIndex == -1) { MessageBox.Show("Select a Client", "Error"); return; }
+                if (AutoFocus.Checked) Utils.LaunchGame();
                 Util.InjectClient();
             }
         }
@@ -165,7 +167,7 @@ namespace FadedInjector
                 if (Open.ShowDialog() == DialogResult.OK)
                 {
                     string ImageFile = Open.FileName;
-                    System.Drawing.Image Img = System.Drawing.Image.FromFile(ImageFile);
+                    Image Img = Image.FromFile(ImageFile);
                     Animation.Image = Img;
                     Refresh();
                 }

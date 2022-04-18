@@ -44,6 +44,10 @@
             this.SelectDLL = new Guna.UI2.WinForms.Guna2Button();
             this.AutoInject = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.SettingsPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.AutoFocusLabel = new System.Windows.Forms.Label();
+            this.AutoFocus = new Guna.UI2.WinForms.Guna2CustomCheckBox();
+            this.DarknessLabel = new System.Windows.Forms.Label();
+            this.DarknessSlider = new Guna.UI2.WinForms.Guna2TrackBar();
             this.FreezeGifLabel = new System.Windows.Forms.Label();
             this.FreezeGif = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.RpcLabel = new System.Windows.Forms.Label();
@@ -56,8 +60,6 @@
             this.SpooferPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.Spoof = new Guna.UI2.WinForms.Guna2Button();
             this.VersionList = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.DarknessSlider = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.DarknessLabel = new System.Windows.Forms.Label();
             this.Titlebar.SuspendLayout();
             this.SettingsPanel.SuspendLayout();
             this.InjectPanel.SuspendLayout();
@@ -260,6 +262,8 @@
             // SettingsPanel
             // 
             this.SettingsPanel.BackColor = System.Drawing.Color.Transparent;
+            this.SettingsPanel.Controls.Add(this.AutoFocusLabel);
+            this.SettingsPanel.Controls.Add(this.AutoFocus);
             this.SettingsPanel.Controls.Add(this.DarknessLabel);
             this.SettingsPanel.Controls.Add(this.DarknessSlider);
             this.SettingsPanel.Controls.Add(this.FreezeGifLabel);
@@ -273,8 +277,60 @@
             this.SettingsPanel.Location = new System.Drawing.Point(512, 43);
             this.SettingsPanel.Name = "SettingsPanel";
             this.SettingsPanel.ShadowColor = System.Drawing.Color.Black;
-            this.SettingsPanel.Size = new System.Drawing.Size(306, 129);
+            this.SettingsPanel.Size = new System.Drawing.Size(306, 160);
             this.SettingsPanel.TabIndex = 7;
+            // 
+            // AutoFocusLabel
+            // 
+            this.AutoFocusLabel.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AutoFocusLabel.ForeColor = System.Drawing.Color.White;
+            this.AutoFocusLabel.Location = new System.Drawing.Point(38, 94);
+            this.AutoFocusLabel.Name = "AutoFocusLabel";
+            this.AutoFocusLabel.Size = new System.Drawing.Size(175, 20);
+            this.AutoFocusLabel.TabIndex = 15;
+            this.AutoFocusLabel.Text = "AutoFocus/AutoOpen";
+            this.AutoFocusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // AutoFocus
+            // 
+            this.AutoFocus.BackColor = System.Drawing.Color.Transparent;
+            this.AutoFocus.CheckedState.BorderColor = System.Drawing.Color.Fuchsia;
+            this.AutoFocus.CheckedState.BorderRadius = 2;
+            this.AutoFocus.CheckedState.BorderThickness = 0;
+            this.AutoFocus.CheckedState.FillColor = System.Drawing.Color.Fuchsia;
+            this.AutoFocus.ForeColor = System.Drawing.Color.White;
+            this.AutoFocus.Location = new System.Drawing.Point(12, 94);
+            this.AutoFocus.Name = "AutoFocus";
+            this.AutoFocus.Size = new System.Drawing.Size(20, 20);
+            this.AutoFocus.TabIndex = 14;
+            this.AutoFocus.Text = "Auto Inject";
+            this.AutoFocus.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.AutoFocus.UncheckedState.BorderRadius = 2;
+            this.AutoFocus.UncheckedState.BorderThickness = 0;
+            this.AutoFocus.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // DarknessLabel
+            // 
+            this.DarknessLabel.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarknessLabel.ForeColor = System.Drawing.Color.White;
+            this.DarknessLabel.Location = new System.Drawing.Point(219, 123);
+            this.DarknessLabel.Name = "DarknessLabel";
+            this.DarknessLabel.Size = new System.Drawing.Size(84, 20);
+            this.DarknessLabel.TabIndex = 13;
+            this.DarknessLabel.Text = "Darkness";
+            this.DarknessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // DarknessSlider
+            // 
+            this.DarknessSlider.LargeChange = 1;
+            this.DarknessSlider.Location = new System.Drawing.Point(12, 123);
+            this.DarknessSlider.Maximum = 20;
+            this.DarknessSlider.Name = "DarknessSlider";
+            this.DarknessSlider.Size = new System.Drawing.Size(201, 23);
+            this.DarknessSlider.TabIndex = 12;
+            this.DarknessSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.DarknessSlider.Value = 15;
+            this.DarknessSlider.Scroll += new System.Windows.Forms.ScrollEventHandler(this.DarknessSlider_Scroll);
             // 
             // FreezeGifLabel
             // 
@@ -469,29 +525,6 @@
             this.VersionList.TabIndex = 4;
             this.VersionList.SelectedIndexChanged += new System.EventHandler(this.VersionList_SelectedIndexChanged);
             // 
-            // DarknessSlider
-            // 
-            this.DarknessSlider.LargeChange = 1;
-            this.DarknessSlider.Location = new System.Drawing.Point(12, 94);
-            this.DarknessSlider.Maximum = 20;
-            this.DarknessSlider.Name = "DarknessSlider";
-            this.DarknessSlider.Size = new System.Drawing.Size(201, 23);
-            this.DarknessSlider.TabIndex = 12;
-            this.DarknessSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.DarknessSlider.Value = 15;
-            this.DarknessSlider.Scroll += new System.Windows.Forms.ScrollEventHandler(this.DarknessSlider_Scroll);
-            // 
-            // DarknessLabel
-            // 
-            this.DarknessLabel.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DarknessLabel.ForeColor = System.Drawing.Color.White;
-            this.DarknessLabel.Location = new System.Drawing.Point(219, 94);
-            this.DarknessLabel.Name = "DarknessLabel";
-            this.DarknessLabel.Size = new System.Drawing.Size(84, 20);
-            this.DarknessLabel.TabIndex = 13;
-            this.DarknessLabel.Text = "Darkness";
-            this.DarknessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,6 +582,8 @@
         private Guna.UI2.WinForms.Guna2Button Spoof;
         private System.Windows.Forms.Label DarknessLabel;
         private Guna.UI2.WinForms.Guna2TrackBar DarknessSlider;
+        private System.Windows.Forms.Label AutoFocusLabel;
+        private Guna.UI2.WinForms.Guna2CustomCheckBox AutoFocus;
     }
 }
 
