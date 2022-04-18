@@ -6,3 +6,4 @@ Credits:
 
 Contributors:
 * Floppy
+* Deadly
