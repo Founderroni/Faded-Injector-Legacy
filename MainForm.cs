@@ -39,6 +39,7 @@ namespace FadedInjector
         {
             Util.CheckForDirectory();
             OpenFileDialog FileIn = new OpenFileDialog();
+             Open.Filter = "dll |*.dll";
             if (FileIn.ShowDialog() == DialogResult.OK)
             {
                 if (FileIn.SafeFileName.ToLower().EndsWith(".dll"))
