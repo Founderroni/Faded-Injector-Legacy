@@ -449,7 +449,7 @@
             this.Animation.ForeColor = System.Drawing.Color.White;
             this.Animation.Image = ((System.Drawing.Image)(resources.GetObject("Animation.Image")));
             this.Animation.ImageSize = new System.Drawing.Size(150, 150);
-            this.Animation.Location = new System.Drawing.Point(329, 166);
+            this.Animation.Location = new System.Drawing.Point(341, 158);
             this.Animation.Name = "Animation";
             this.Animation.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.Animation.Size = new System.Drawing.Size(148, 148);
