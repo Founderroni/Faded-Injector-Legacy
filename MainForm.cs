@@ -107,7 +107,7 @@ namespace FadedInjector
                     Util.DownloadFile($"https://github.com/BadMan-Client/BadMan-Releases/releases/latest/download/BadManPublic.dll", $"{AssetDirectory}Badman.dll");
                     break;
                 case 10:
-                    Util.DownloadFile($"https://cdn.discordapp.com/attachments/937726504614395954/951649397807140884/Strike.exe", $"{AssetDirectory}StrikeInjector.exe");
+                    Util.DownloadFile($"https://cdn.strike.wtf/StrikeInjector.exe", $"{AssetDirectory}StrikeInjector.exe");
                     break;
             }
         }
