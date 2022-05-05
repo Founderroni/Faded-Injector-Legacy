@@ -247,6 +247,9 @@ namespace FadedInjector
                 case 13:
                     McVersion = "1.18.12.1";
                     break;
+                case 14:
+                    McVersion = "1.18.31";
+                    break;
             }
         }
 
