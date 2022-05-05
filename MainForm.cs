@@ -62,14 +62,13 @@ namespace FadedInjector
             if (!AutoInject.Checked)
             {
                 if (FileToInjectDir == "" || FileToInjectDir == null) { MessageBox.Show("Select a DLL", "Error"); return; }
-                if (AutoFocus.Checked) Utils.LaunchGame();
                 Util.InjectDLL(FileToInjectDir);
             } else
             {
                 if (ClientList.SelectedIndex == -1) { MessageBox.Show("Select a Client", "Error"); return; }
-                if (AutoFocus.Checked) Utils.LaunchGame();
                 Util.InjectClient();
             }
+            if (AutoFocus.Checked) Utils.LaunchGame();
         }
 
         private void ClientList_SelectedIndexChanged(object sender, EventArgs e)

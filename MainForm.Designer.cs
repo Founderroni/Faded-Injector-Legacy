@@ -286,9 +286,9 @@
             this.AutoFocusLabel.ForeColor = System.Drawing.Color.White;
             this.AutoFocusLabel.Location = new System.Drawing.Point(38, 94);
             this.AutoFocusLabel.Name = "AutoFocusLabel";
-            this.AutoFocusLabel.Size = new System.Drawing.Size(175, 20);
+            this.AutoFocusLabel.Size = new System.Drawing.Size(245, 20);
             this.AutoFocusLabel.TabIndex = 15;
-            this.AutoFocusLabel.Text = "AutoFocus/AutoOpen";
+            this.AutoFocusLabel.Text = "AutoFocus/AutoOpen Game";
             this.AutoFocusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AutoFocus
@@ -517,7 +517,8 @@
             "1.18.0",
             "1.18.2",
             "1.18.10.4",
-            "1.18.12.1"});
+            "1.18.12.1",
+            "1.18.31"});
             this.VersionList.Location = new System.Drawing.Point(16, 26);
             this.VersionList.Name = "VersionList";
             this.VersionList.Size = new System.Drawing.Size(160, 36);
