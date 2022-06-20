@@ -75,38 +75,57 @@ namespace FadedInjector
         {
             switch (ClientList.SelectedIndex)
             {
+                // Horion
                 case 0:
                     Util.DownloadFile($"https://horion.download/bin/Horion.dll", $"{AssetDirectory}Horion.dll");
                     break;
+                    // Packet Client (won't download anymore ;-;)
                 case 1:
                     Util.DownloadFile($"https://github.com/PacketDeveloper/PacketClient/raw/main/PacketClientFree.dll", $"{AssetDirectory}Packet.dll");
                     break;
+                    // Onix client (Legit)
                 case 2:
                     Util.DownloadFile($"https://github.com/bernarddesfosse/onixclientautoupdate/raw/main/OnixClient.dll", $"{AssetDirectory}Onix.dll");
                     break;
+                    // NG client (NG sucks dick for FPS and Stability)
                 case 3:
                     Util.DownloadFile($"{AssetGitClient}NG.dll", $"{AssetDirectory}NG.dll");
                     break;
+                    // Fadeaway (1.16.201 Discontinued)
                 case 4:
                     Util.DownloadFile($"{AssetGitClient}Fadeaway_1.16.201.dll", $"{AssetDirectory}Fadeaway1.16.201.dll");
                     break;
+                    // Fadeaway (1.17.11 Discontinued)
                 case 5:
                     Util.DownloadFile($"{AssetGitClient}Fadeaway_1.17.11.1.dll", $"{AssetDirectory}Fadeaway1.17.11.1.dll");
                     break;
+                    // Zephyr (Auto updated by Founder when he has time for it.)
                 case 6:
                     Util.DownloadFile($"{AssetGitClient}Zephyr.dll", $"{AssetDirectory}Zephyr.dll");
                     break;
+                    // KekClub (Must be using Kek+.club)
                 case 7:
                     Util.DownloadFile($"{AssetGitClient}KekClub.dll", $"{AssetDirectory}Kek.dll");
                     break;
+                    // Bad Client (Crashes alot, only advantage is flies)
                 case 8:
                     Util.DownloadFile($"{AssetGitClient}Bom.dll", $"{AssetDirectory}Bom.dll");
                     break;
+                //                                                            Badman Client
                 case 9:
                     Util.DownloadFile($"https://github.com/BadMan-Client/BadMan-Releases/releases/latest/download/BadManPublic.dll", $"{AssetDirectory}Badman.dll");
                     break;
+                    //                                Strike Client (1.19 now.)
                 case 10:
                     Util.DownloadFile($"https://cdn.strike.wtf/StrikeInjector.exe", $"{AssetDirectory}StrikeInjector.exe");
+                    break;
+                    //                                  Packet V2 Main
+                    case 11:
+                    Util.DownloadFile($"https://github.com/PacketDeveloper/PacketClientDLLS/blob/main/PacketClient.dll");
+                    break;
+                    // Alternate Packet V2 DLL (FadedKow/Assets/PacketV2.11.dll)
+                    case 12:
+                    Util.DownloadFile($"{AssetGitClient}PacketV2.11.dll", $"{AssetDirectory}PacketV2.11.dll");
                     break;
             }
         }
