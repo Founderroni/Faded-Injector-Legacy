@@ -157,6 +157,8 @@ namespace FadedInjector.Utility
                 case 10:
                     InjectDLL($"{MainForm.AssetDirectory}StrikeInjector.exe");
                     break;
+                case 11:
+                    InjectDLL($"{MainForm.AssetDirectory}PacketV2.11.dll");
             }
         }
     }
