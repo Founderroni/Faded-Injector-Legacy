@@ -6,6 +6,7 @@ Injector for MC W10 created by Founder#8300
 Credits:
 * EchoHackCMD - Inject Code
 * OnixLauncher - LaunchGame Function
+* Dance animation taken from https://seppuku.pw
 
 Contributors:
 * Floppy
