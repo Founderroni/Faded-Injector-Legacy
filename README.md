@@ -1,7 +1,7 @@
 **This repo has been discontinued and archived.**
 
 # Faded-Injector
-Injector for MC W10 created by Founder#8300
+Injector for MC W10 created by Founder
 
 Credits:
 * EchoHackCMD - Inject Code
